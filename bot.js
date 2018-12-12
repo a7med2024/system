@@ -261,7 +261,7 @@ ${users.join('\n')}
 }
 });
 client.on('message' , message => {
-if(message.content === '!voice') {
+if(message.content === '#voice') {
     message.channel.send(`**عدد الاشخاص الموجودين بـ  الرومات الصوتيه : ${message.guild.members.filter(g => g.voiceChannel).size}**`);
 }
 });
@@ -335,7 +335,7 @@ coll.first().delete()
 client.on('ready', function(){
   client.user.setStatus("dnd");
     var ms = 40000 ;	
-    var setGame = ['!inv','!help'];	
+    var setGame = ['#inv','#help'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	
@@ -352,7 +352,7 @@ j = 1;
 });
 
 client.on('message' , message => {
-  var prefix = "!";
+  var prefix = "#";
   if(message.author.bot) return;
   if(message.content.startsWith(prefix + "bcrole")) {
     let args = message.content.split(" ").slice(1);
@@ -377,7 +377,7 @@ client.on('message' , message => {
         return;
       }
           var role = message.mentions.roles.first();
-            if(!role) {
+            if(#role) {
               message.reply("لا توجد رتبة بهذا الاسم");
                 return;
             }
@@ -398,7 +398,7 @@ client.on('message' , message => {
   client.on('message', msg => {
     if(msg.author.bot) return;
     
-    if(msg.content === '!sr') {
+    if(msg.content === '#sr') {
       client.guilds.forEach(g => {
         
         let l = g.id
@@ -437,8 +437,8 @@ m.sendMessage(args)
 client.on('ebnklb',function(ebnklb) {
     
     if(ebnklb.content.startsWith(`<@${client.user.id}>`)) {
-        ebnklb.channel.send('Hey Im **Sliver bot !**  A Nice Bot Developed By:`MHSTR`')
-        ebnklb.channel.send('My Prefix `!`')
+        ebnklb.channel.send('Hey Im **A7med bot !**  A Nice Bot Developed By:`MHSTR`')
+        ebnklb.channel.send('My Prefix `#`')
 
     }
 });
@@ -886,7 +886,7 @@ const codes = {
   
   
   client.on('message' , async message => {
-	  var prefix = "!";
+	  var prefix = "#";
          if(message.content.startsWith(prefix + "emoji")) {
             let args = message.content.split(" ").slice(1);
     if (args.length < 1) {
@@ -1045,7 +1045,7 @@ const zead = [
    '*** انتظر الجزء الثاني عندما يوصل البوت 100 سيرفر , ساعدني في نشر البوت وادخل هذا السيرفر  ***'
 ];
  client.on('message', message => {
- if (message.content.startsWith('!مريم')) {
+ if (message.content.startsWith('#مريم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة مريم ..")
   .setColor('RANDOM')
@@ -1103,7 +1103,7 @@ if (message.content.startsWith(prefix + 'trans')) {
 
 client.on('message', message => {
      if(!message.channel.guild) return;
-var prefix = "!";
+var prefix = "#";
                 if(message.content.startsWith(prefix + 'allbots')) {
 
     
@@ -1232,7 +1232,7 @@ var v1 = new Discord.RichEmbed()
   v1.setTimestamp(new Date())
   v1.setColor("#6a109d")
   v1.setDescription('***__ انتظر .. جاري الحصول علي البيانات __***')
-  v1.setFooter("# | Sliver TeaM |")
+  v1.setFooter("# |A7med TeaM |")
 var heroo = new Discord.RichEmbed()
 .setColor('#6a109d')
 .setTimestamp(new Date())
@@ -1408,7 +1408,7 @@ if (message.member.voiceChannel != null) {
  var authorchannel = message.member.voiceChannelID;
  var usermentioned = message.mentions.members.first().id;
 var embed = new Discord.RichEmbed()
- .setTitle("Succes!")
+ .setTitle("Succes#")
  .setColor("#000000")
  .setDescription(`لقد قمت بسحب <@${usermentioned}> الى الروم الصوتي الخاص بك✅ `)
 var embed = new Discord.RichEmbed()
@@ -1912,7 +1912,7 @@ if (!points[message.author.id]) points[message.author.id] = {
     points: 0,
   };
   if(!message.guild) return;
-    let id = message.author.id,prefix="!";
+    let id = message.author.id,prefix="#";
     if (spee[id] && (new Date).getTime() - spee[id] < 15*1000) {
         let r = (new Date).getTime() - spee[id];
         r = 15*1000 - r;
@@ -2449,7 +2449,7 @@ client.on("message", message => {
 
 const cuttweet = [     'كت تويت ‏| تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟',     'كت تويت | أكثر شيء يُسكِت الطفل برأيك؟',     'كت تويت | الحرية لـ ... ؟',     'كت تويت | قناة الكرتون المفضلة في طفولتك؟',     'كت تويت ‏| كلمة للصُداع؟',     'كت تويت ‏| ما الشيء الذي يُفارقك؟',     'كت تويت ‏| ما الشيء الذي يُفارقك؟',     'كت تويت | ��وقف مميز فعلته مع شخص ولا يزال يذكره لك؟',     'كت تويت ‏| أيهما ينتصر، الكبرياء أم الحب؟',     'كت تويت | بعد ١٠ سنين ايش بتكون ؟',     'كت تويت ‏| مِن أغرب وأجمل الأسماء التي مرت عليك؟',     '‏كت تويت | عمرك شلت مصيبة عن ش��������ص برغبتك ؟',     'كت تويت | أكثر سؤال وجِّه إليك مؤخرًا؟',     '‏كت تويت | ما هو الشيء الذي يجعلك تشعر بالخوف؟',     '‏كت تويت | وش يفسد الصداقة؟',     '‏كت تويت | شخص لاترفض له طلبا ؟',     '‏كت تويت | كم مره خسرت شخص تحبه؟.',     '‏كت تويت | كيف تتعامل مع الاشخاص السلبيين ؟',     '‏كت تويت | كلمة تشعر بالخجل اذا قيلت لك؟',     '‏كت تويت | جسمك اكبر من عٌمرك او العكسّ ؟!',     '‏كت تويت |أقوى كذبة مشت عليك ؟',     '‏كت تويت | تتأثر بدموع شخص يبكي قدامك قبل تعرف السبب ؟',     'كت تويت | هل حدث وضحيت من أجل شخصٍ أحببت؟',     '‏كت تويت | أكثر تطبيق تستخدمه مؤخرًا؟',     '‏كت تويت | ‏اكثر شي يرضيك اذا زعلت بدون تفكير ؟',     '‏كت تويت | وش محتاج عشان تكون مبسوط ؟',     '‏كت تويت | مطلبك الوحيد الحين ؟',     '‏كت تويت | هل حدث وشعرت بأنك ارتكبت أحد الذنوب أثناء الصيام؟',];
  client.on('message', message => {
-	   var prefix = "!";
+	   var prefix = "#";
    if (message.content.startsWith(prefix + "كت تويت")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
@@ -2464,7 +2464,7 @@ const cuttweet = [     'كت تويت ‏| تخيّل لو أنك سترسم ش�
 
    client.on('message',function(message) {
   if (message.author.bot) return;
-var prefix = "!";
+var prefix = "#";
                   if(!message.channel.guild) return;
 
                     if (message.content === prefix + "members") {
@@ -2542,7 +2542,7 @@ message.channel.sendEmbed(Embed).then(msg => {
 
 
 client.on('message' , message => {
-var prefix = "!"
+var prefix = "#"
 
 if (message.author.bot) return;
 if (message.content.startsWith(prefix + "contact")) {
@@ -2779,7 +2779,7 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 });
-client.on('message', omar => {
+client.on('message', a7med => {
 var prefix = "#";
 if(omar.content.split(' ')[0] == prefix + 'dc') {  // delete all channels
 if (!omar.channel.guild) return;
@@ -2842,7 +2842,7 @@ msg.delete();
 });
 
 client.on("message", (message) => {
-if (message.content.startsWith("!ct")) {
+if (message.content.startsWith("#ct")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
@@ -2853,7 +2853,7 @@ message.channel.sendMessage('تـم إنـشاء روم كـتابـي')
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("!cv")) {
+if (message.content.startsWith("#cv")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
@@ -2864,7 +2864,7 @@ if (message.content.startsWith("!cv")) {
 
 
 client.on("message", (message) => {
-    if (message.content.startsWith('!delet')) {
+    if (message.content.startsWith('#delet')) {
         if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
 
         let args = message.content.split(' ').slice(1);
