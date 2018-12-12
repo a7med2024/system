@@ -2975,7 +2975,28 @@ client.on("guildMemberAdd", member => {
       }
       });
 
-
+client.on('message', msg => {
+  if(msg.content === 'hideall') {
+    msg.guild.channels.forEach(c => {
+      c.overwritePermissions(msg.guild.id, {
+        SEND_MESSAGES: false,
+        READ_MESSAGES: false
+    });
+}); //JakeTOXIC
+    msg.reply('**All Channels Have Been Hided** ✅')
+  }
+});
+client.on('message', msg => {
+  if(msg.content === 'showall') {
+    msg.guild.channels.forEach(c => {
+      c.overwritePermissions(msg.guild.id, {
+        SEND_MESSAGES: true,
+        READ_MESSAGES: true
+    });
+});
+    msg.reply('**All Channels Have Been UnHided** ✅')
+  }
+});
 
 
 
