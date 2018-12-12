@@ -31,7 +31,12 @@ const sql = require("sqlite");
 ,ti={}  
 ,spee={};
 
- 
+ client.on("ready", () => {
+function arabecodes() {
+client.guilds.get('518838249649864719').roles.find("name", "RANDOM").setColor("RANDOM");
+}
+setInterval(arabecodes, 1700);
+})
 
 const superagent = require("superagent")
 client.on('message' , async (message) => {
