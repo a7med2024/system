@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const devs = ['389090790984515594','350408440566382592'];
+const devs = ['514041065041297421'];
 var prefix = "!";
 const adminprefix = "!"
 const db = require('quick.db');
@@ -335,7 +335,7 @@ coll.first().delete()
 client.on('ready', function(){
   client.user.setStatus("dnd");
     var ms = 40000 ;	
-    var setGame = ['!inv','!help'];	
+    var setGame = ['This bot by a7med','!help |Star system|'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	
