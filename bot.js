@@ -46,6 +46,15 @@ client.on("guildMemberAdd", member => {
 }).catch(console.error)
 })
 
+client.on('message', message => {
+    if(message.channel.type === 'dm') {
+        var guildID = '523297882556596224'; // <=============== ايدي السيرفر حقك
+        if(message.content.includes('discord.gg/')) {
+            var member = client.guilds.find(g => g.id === guildID).members.find(m => m.id === message.author.id);
+            member.ban({ reason: 'ADS In Private.' }).catch();
+        }
+    }
+});
 
 const superagent = require("superagent")
 client.on('message' , async (message) => {
