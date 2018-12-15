@@ -56,6 +56,26 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+  if (message.content.startsWith(prefix + 'linkbot')) {
+    var mentionned = message.mentions.users.first();
+    var mrx;
+      if(mentionned){
+          var mrx = mentionned; } else {
+          var mrx = message.author;
+      }
+      if(!mentionned.bot) return message.reply("الشخص الذي منشنته ليس بوت");
+      if(!mentionned) return message.reply("منشن البوت");
+      let alpha = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setTitle(`Link Bot`)
+      .setURL(`https://discordapp.com/oauth2/authorize?client_id=${mrx.id}&scope=bot&permissions=8`)
+      .setThumbnail(mrx.avatarURL)
+      .setFooter(`- Requested By: ${message.author.tag}`)
+      message.channel.sendEmbed(alpha);
+  }
+});
+
 const superagent = require("superagent")
 client.on('message' , async (message) => {
  if (message.content.startsWith(prefix + 'yn')) {
