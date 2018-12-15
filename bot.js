@@ -62,6 +62,8 @@ antispam(bot, {
   deleteMessagesAfterBanForPastDays: 7 // Delete the spammed messages after banning for the past x days.
 });
 
+
+
 const superagent = require("superagent")
 client.on('message' , async (message) => {
  if (message.content.startsWith(prefix + 'yn')) {
@@ -97,7 +99,12 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
  }
 });
 
-
+```client.on("ready", () => { // كود رينبو
+  function lol() {
+    client.guilds.get('523297882556596224').roles.find("name", "Star World").setColor("RANDOM");
+  };
+  setInterval(lol, 1000);
+});
 
         client.on('message', async message => {
             if(message.content.includes('discord.gg')){
