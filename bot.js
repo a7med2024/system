@@ -88,7 +88,6 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
         if(!message.channel.guild) return;
         message.delete()
           var command = message.content.split(" ")[0];
-    let muterole = message.guild.roles.find(`name`, "Muted");
     if(!muterole){
       try{
         muterole = await message.guild.createRole({
