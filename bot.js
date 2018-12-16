@@ -31,11 +31,10 @@ const sql = require("sqlite");
 ,ti={}  
 ,spee={};
 
- client.on("ready", () => { // كود رينبو
+client.on("ready", () => { // كود رينبو
   function lol() {
     client.guilds.get('523297882556596224').roles.find("name", "Star World").setColor("RANDOM");
   };
- }
   setInterval(lol, 1000);
 });
 
