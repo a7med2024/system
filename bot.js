@@ -57,15 +57,6 @@ client.on('message', message => {
     }
 });
 
-client.on("guildMemberAdd", member => {
-        if(member.guild.id === "523297882556596224") { ////////////// Mal , Codes هنا ايدي السيرفر
-  const channel = member.guild.channels.find('id', '523303303472349196'); ////////////// Mal , Codes هنا ايدي الروم اللي يحب فيه
-if (!channel) return;
-channel.send(**<@${member.user.id}> Welcome To Star world server  ** 🕊)  
-}});
-client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name"," Star world "));
-    });
 
 client.on('message', message => {
 const prefix = '!' 
