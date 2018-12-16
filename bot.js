@@ -57,7 +57,6 @@ client.on('message', message => {
     }
 });
 
-
 client.on('message', message => {
 const prefix = '!' 
     if(message.content === prefix + 'cc1') {
@@ -323,11 +322,7 @@ const prefix = '!'
      .setColor('#502faf').setAuthor(`${message.author.username}'`, message.author.avatarURL).setDescription('``تم انشاءالالوان``')});
     }
     });
- 
- 
- 
- 
- 
+
  
   client.on('message', msg => {//msg
     if (msg.content === '.الوان') {
