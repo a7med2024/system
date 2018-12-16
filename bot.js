@@ -57,6 +57,20 @@ client.on('message', message => {
 });
 
 
+var antispam = require("anti-spam");//npm i anti-spam
+ 
+antispam(client, {
+  warnBuffer: 3, //الحد الأقصى المسموح به من الرسائل لإرسالها في الفاصل الزمني قبل الحصول على تحذير.
+  maxBuffer: 5, // الحد الأقصى المسموح به من الرسائل لإرسالها في الفاصل الزمني قبل الحصول على ميوت.
+  interval: 1000, // مقدار الوقت قبل حصول باند
+  warningMessage: "stop spamming.", // رسالة تحذير اذا سوا سبام!
+  roleMessage: "Muted!!", // الرسالة الي تجي اذا شخص اخذ ميوت
+  roleName: "Muted", // اسم رتبة الميوت
+  maxDuplicatesWarning: 7, // عدد الرسايل الي قبل التحذيرات
+  maxDuplicatesBan: 10, // عدد الرسايل الي يقدر المستخدم يرسلها قبل الميوت
+  time: 10, // عدد الوقت الي يجلس لين تسحب رتبة الميوت من الشخص الحسبة برمجية وليست كتابية 
+})
+
 client.on('message', message => {
 const prefix = '!' 
     if(message.content === prefix + 'cc1') {
@@ -1293,22 +1307,6 @@ console.log('[38ab] Send By: ' + message.author.username)
   }
 });
 
-client.on('message', ra3d => {
-var prefix = "!";
-                        let args = ra3d.content.split(" ").slice(1).join(" ")
-if(ra3d.content.startsWith(prefix + 'ccolors')) {
-    if(!args) return ra3d.channel.send('`يرجي اختيار كم لون `');
-             if (!ra3d.member.hasPermission('MANAGE_ROLES')) return ra3d.channel.sendMessage('`**⚠ | `[MANAGE_ROLES]` لا يوجد لديك صلاحية**'); 
-              ra3d.channel.send(`**✅ |Created __${args}__ Colors**`);
-                  setInterval(function(){})
-                    let count = 0;
-                    let ecount = 0;
-          for(let x = 1; x < `${parseInt(args)+1}`; x++){
-            ra3d.guild.createRole({name:x,
-              color: 'RANDOM'})
-              }
-            }
-       });
 
 client.on('message', message => {
 var prefix = "!";
