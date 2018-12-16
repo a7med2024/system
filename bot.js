@@ -35,7 +35,7 @@ const sql = require("sqlite");
   function lol() {
     client.guilds.get('523297882556596224').roles.find("name", "Star World").setColor("RANDOM");
   };
-  }
+ }
   setInterval(lol, 1000);
 });
 
