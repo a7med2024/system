@@ -39,6 +39,16 @@ client.on("ready", () => { // كود رينبو
 });
 
 client.on("guildMemberAdd", member => {
+        if(member.guild.id === "523297882556596224") { ////////////// Mal , Codes هنا ايدي السيرفر
+  const channel = member.guild.channels.find('id', '523303303472349196'); ////////////// Mal , Codes هنا ايدي الروم اللي يحب فيه
+if (!channel) return;
+channel.send(`**<@${member.user.id}> Welcome To star world server**:dove: `)  
+}});
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name","Star World"));
+    });
+
+client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
 :crown: ${member}:crown:  
