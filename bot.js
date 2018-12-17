@@ -38,26 +38,6 @@ client.on("ready", () => { // كود رينبو
   setInterval(lol, 1000);
 });
 
-client.on('message', async message => {
-  if(message.author.bot) return;
-  let prefix = '!';
-
-  let command = message.content.split(" ")[0].slice(prefix.length);
-  let args = message.content.split(" ").slice(1);
-  if(!message.content.toLowerCase().startsWith(prefix)) return;
-
- if(command == 'dcolors') {
-   if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(لاتمتلك الصلاحيات لفعل ذلك! ❌);
-    message.channel.send("جاري المسح..").then(async m => {
-      await message.guild.roles.forEach(role => {
-        if(/^\d+$/gi.test(role.name)) {
-          role.delete();
-        }
-      });
-      await m.edit(تم إزالة جميع الالوان.)
-    });
-  }
-});
 
 client.on("guildMemberAdd", member => {
         if(member.guild.id === "523297882556596224") { ////////////// Mal , Codes هنا ايدي السيرفر
