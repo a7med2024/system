@@ -31,14 +31,19 @@ const sql = require("sqlite");
 ,ti={}  
 ,spee={};
 
-
+client.on("ready", () => { // كود رينبو
+  function lol() {
+    client.guilds.get('523297882556596224').roles.find("name", "Star World").setColor("RANDOM");
+  };
+  setInterval(lol, 1000);
+});
 
 
 client.on("guildMemberAdd", member => {
         if(member.guild.id === "523297882556596224") { ////////////// Mal , Codes هنا ايدي السيرفر
   const channel = member.guild.channels.find('id', '523303303472349196'); ////////////// Mal , Codes هنا ايدي الروم اللي يحب فيه
 if (!channel) return;
-channel.send(`**<@${member.user.id}> Welcome To star world server**:dove: `)  
+channel.send(`** Welcome To star world server:dove:<@${member.user.id}>** `)  
 }});
 client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("name","Star World"));
