@@ -40,7 +40,7 @@ client.on('message', async message => {
   if(!message.content.toLowerCase().startsWith(prefix)) return;
 
   if(command == 'dcolors') {
-    if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(لاتمتلك الصلاحيات لفعل ذلك! :x:);
+    if(!message.member.hasPermission("ADMINISTRATOR")) return; message.channel.send(لاتمتلك الصلاحيات لفعل ذلك! :x:);
     message.channel.send("جاري المسح..").then(async m => {
       await message.guild.roles.forEach(role => {
         if(/^\d+$/gi.test(role.name)) {
