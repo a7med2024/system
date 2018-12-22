@@ -70,7 +70,7 @@ client.on('message', message => {
 
 client.on("guildMemberAdd", member => {
         if(member.guild.id === "526075350393028618") { ////////////// Mal , Codes هنا ايدي السيرفر
-  const channel = member.guild.channels.find('id', '523303303472349196'); ////////////// Mal , Codes هنا ايدي الروم اللي يحب فيه
+  const channel = member.guild.channels.find('id', '526075351131095061'); ////////////// Mal , Codes هنا ايدي الروم اللي يحب فيه
 if (!channel) return;
 channel.send(`** Welcome To Rulom server:dove:<@${member.user.id}>** `)  
 }});
