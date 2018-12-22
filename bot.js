@@ -51,16 +51,6 @@ client.on("ready", () => { // كود رينبو
 
 
 client.on("guildMemberAdd", member => {
-        if(member.guild.id === "523297882556596224") { ////////////// Mal , Codes هنا ايدي السيرفر
-  const channel = member.guild.channels.find('id', '523303303472349196'); ////////////// Mal , Codes هنا ايدي الروم اللي يحب فيه
-if (!channel) return;
-channel.send(`** Welcome To star world server:dove:<@${member.user.id}>** `)  
-}});
-client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","Star World"));
-    });
-
-client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
 :crown: ${member}:crown:  
@@ -70,13 +60,23 @@ client.on("guildMemberAdd", member => {
 
 client.on('message', message => {
     if(message.channel.type === 'dm') {
-        var guildID = '523297882556596224'; // <=============== ايدي السيرفر حقك
+        var guildID = '526075350393028618'; // <=============== ايدي السيرفر حقك
         if(message.content.includes('discord.gg/')) {
             var member = client.guilds.find(g => g.id === guildID).members.find(m => m.id === message.author.id);
             member.ban({ reason: 'ADS In Private.' }).catch();
         }
     }
 });
+
+client.on("guildMemberAdd", member => {
+        if(member.guild.id === "526075350393028618") { ////////////// Mal , Codes هنا ايدي السيرفر
+  const channel = member.guild.channels.find('id', '523303303472349196'); ////////////// Mal , Codes هنا ايدي الروم اللي يحب فيه
+if (!channel) return;
+channel.send(`** Welcome To Rulom server:dove:<@${member.user.id}>** `)  
+}});
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name","Rulom"));
+    });
 
 client.on('message', message => {
 const prefix = '!' 
