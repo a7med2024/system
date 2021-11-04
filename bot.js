@@ -58,7 +58,7 @@ client.on('message', msg => {
 
 client.on("ready", () => { // كود رينبو
   function lol() {
-    client.guilds.get('523297882556596224').roles.find("name", "Star World").setColor("RANDOM");
+    client.guilds.get('702376681394143302').roles.find("name", "Star World").setColor("RANDOM");
   };
   setInterval(lol, 1000);
 });
@@ -74,7 +74,7 @@ client.on("guildMemberAdd", member => {
 
 client.on('message', message => {
     if(message.channel.type === 'dm') {
-        var guildID = '526075350393028618'; // <=============== ايدي السيرفر حقك
+        var guildID = '725416494606974976'; // <=============== ايدي السيرفر حقك
         if(message.content.includes('discord.gg/')) {
             var member = client.guilds.find(g => g.id === guildID).members.find(m => m.id === message.author.id);
             member.ban({ reason: 'ADS In Private.' }).catch();
@@ -83,7 +83,7 @@ client.on('message', message => {
 });
 
 client.on("guildMemberAdd", member => {
-        if(member.guild.id === "526075350393028618") { ////////////// Mal , Codes هنا ايدي السيرفر
+        if(member.guild.id === "725416494606974976") { ////////////// Mal , Codes هنا ايدي السيرفر
   const channel = member.guild.channels.find('id', '526075351131095061'); ////////////// Mal , Codes هنا ايدي الروم اللي يحب فيه
 if (!channel) return;
 channel.send(`** Welcome To Rulom server:dove:<@${member.user.id}>** `)  
@@ -3315,5 +3315,5 @@ client.on("guildMemberAdd", member => {
 
 
 
-//MHSTR END NOW THIS IS END
+//Ahmed END NOW THIS IS END
 client.login(process.env.BOT_TOKEN);
